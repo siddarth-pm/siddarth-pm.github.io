@@ -106,4 +106,32 @@ footer {
     color: #6c757d;
     border-top: 1px solid #e9ecef;
     font-size: 0.9rem;
+}
+
+.blog-list {
+    margin-top: 2rem;
+}
+
+.blog-month p {
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 500;
+    color: #343a40;
+}
+
+.blog-post-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.post-date {
+    width: 30px;
+    color: #6c757d;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.blog-posts a {
+    flex: 1;
 } 
