@@ -134,4 +134,28 @@ footer {
 
 .blog-posts a {
     flex: 1;
+}
+
+.course-section h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.course-section h3 a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.course-section h3 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.notes-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.notes-list li {
+    margin-bottom: 0.5rem;
 } 
