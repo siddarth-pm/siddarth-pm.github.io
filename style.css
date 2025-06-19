@@ -1,24 +1,36 @@
+@import url('https://cdn.jsdelivr.net/npm/geist@1.4.2/dist/fonts/geist-sans/variable.css');
+
+:root {
+    --font-sans: 'Geist Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --background-color: #fdfdfd;
+    --text-color: #111827;
+    --subtle-text-color: #6b7280;
+    --border-color: #e5e7eb;
+    --accent-color: #3b82f6;
+    --accent-color-hover: #1d4ed8;
+    --code-bg-color: #f3f4f6;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-sans);
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
-    color: #343a40;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background: #ffffff;
-    color: #343a40;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e9ecef;
+    background: var(--background-color);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header h1 a {
-    color: #343a40;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
 }
@@ -40,18 +52,19 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 nav a {
-    color: #5f6368;
+    color: var(--subtle-text-color);
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    font-weight: 400;
     transition: color 0.2s ease-in-out;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -65,46 +78,51 @@ main {
 }
 
 section {
-    background: #ffffff;
-    padding: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: transparent;
+    padding: 0;
+    margin-bottom: 3rem;
+    border: 0;
+    box-shadow: none;
 }
 
 h2 {
-    color: #343a40;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 10px;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
     margin-top: 0;
-    font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 h3 {
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
 a {
-    color: #007bff;
+    color: var(--accent-color);
     text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
+    color: var(--accent-color-hover);
     text-decoration: underline;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #e9ecef;
-    margin: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
 }
 
 footer {
     text-align: center;
-    padding: 2rem;
-    background: #ffffff;
-    color: #6c757d;
-    border-top: 1px solid #e9ecef;
+    padding: 2.5rem;
+    background: transparent;
+    color: var(--subtle-text-color);
+    border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
 }
 
@@ -113,23 +131,26 @@ footer {
 }
 
 .blog-month p {
-    margin: 1.5rem 0 0.5rem;
+    margin: 2rem 0 1rem;
     font-weight: 500;
-    color: #343a40;
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .blog-post-item {
     display: flex;
     align-items: baseline;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
 }
 
 .post-date {
     width: 30px;
-    color: #6c757d;
-    text-align: right;
+    color: var(--subtle-text-color);
+    text-align: left;
     margin-right: 15px;
     font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 .blog-posts a {
@@ -142,20 +163,44 @@ footer {
 }
 
 .course-section h3 a {
-    color: #343a40;
+    color: var(--text-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .course-section h3 a:hover {
-    color: #007bff;
-    text-decoration: underline;
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 .notes-list {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 1rem;
 }
 
 .notes-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+#post-content, #note-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#post-content h2, #note-content h2 {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+#post-content p, #note-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+#post-content em, #note-content em {
+    color: var(--subtle-text-color);
+    font-style: normal;
 } 
