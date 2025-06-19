@@ -216,9 +216,9 @@ footer {
 
 .profile-pic {
     float: right;
-    margin: 0 0 1rem 2rem;
+    margin: 0.2rem 0 1rem 1.5rem;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
 } 
