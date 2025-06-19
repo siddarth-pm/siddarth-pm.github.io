@@ -212,4 +212,13 @@ footer {
 #post-content em, #note-content em {
     color: var(--subtle-text-color);
     font-style: normal;
+}
+
+.profile-pic {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
 } 
