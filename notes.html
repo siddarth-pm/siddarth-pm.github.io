@@ -41,6 +41,17 @@
             </div>
         </section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const notesSection = document.getElementById('notes');
+            const courseSections = notesSection.querySelectorAll('.course-section');
+            if (courseSections.length === 0) {
+                const message = document.createElement('p');
+                message.textContent = 'Nothing here yet, check back soon!';
+                notesSection.appendChild(message);
+            }
+        });
+    </script>
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
