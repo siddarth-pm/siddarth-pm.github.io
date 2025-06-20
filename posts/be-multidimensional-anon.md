@@ -1,4 +1,7 @@
-## Be multidimensional, anon
-*June 14, 2024*
+<!-- ## Be multidimensional, anon
+*June 14, 2024* -->
 
-[Content of your blog post goes here. The new design provides a cleaner, more readable layout for your text.] 
+Understanding reasoning models — a clear picture
+================================================
+
+This is an example of what it's actually going to be like.
