@@ -20,13 +20,26 @@
     </header>
     <main>
         <section id="post-content">
-            <h2>Be multidimensional, anon</h2>
-            <p><em>June 14, 2024</em></p>
-            <p>
-                [Content of your blog post goes here. The new design provides a cleaner, more readable layout for your text.]
-            </p>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const mdPath = window.location.pathname.replace(/\.html$/, '.md');
+        fetch(mdPath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(text => {
+                document.getElementById('post-content').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                console.error('Error fetching or parsing markdown:', error);
+                document.getElementById('post-content').innerHTML = '<p>Could not load post content.</p>';
+            });
+    </script>
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
