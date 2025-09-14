@@ -67,15 +67,15 @@ body {
 
 .profile-section {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 2.5rem;
     flex-wrap: wrap;
 }
 
 .profile-image {
     width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    height: 180px;
+    border-radius: 8px;
     object-fit: cover;
     flex-shrink: 0;
     border: 3px solid var(--color-bg);
@@ -96,7 +96,7 @@ body {
 }
 
 .title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     color: var(--color-text-secondary);
     margin-bottom: 0.25rem;
     font-weight: 500;
@@ -104,7 +104,7 @@ body {
 
 .affiliation {
     font-size: var(--font-size-base);
-    color: var(--color-text-tertiary);
+    color: var(--color-text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -115,18 +115,18 @@ body {
 }
 
 .contact-link {
-    color: var(--color-accent);
-    text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
     font-weight: 500;
     font-size: var(--font-size-base);
     padding: 0.5rem 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease;
 }
 
 .contact-link:hover {
-    color: var(--color-accent-hover);
-    border-bottom-color: var(--color-accent-hover);
+    text-decoration-thickness: 2px;
 }
 
 /* Section layouts */
@@ -159,7 +159,7 @@ body {
 
 /* About section */
 .intro {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-primary);
     max-width: 100%;
@@ -220,21 +220,19 @@ body {
 }
 
 .paper-link {
-    color: var(--color-accent);
-    text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
     font-weight: 500;
     font-size: 14px;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid var(--color-accent);
-    border-radius: 0.375rem;
-    transition: all 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
 
 .paper-link:hover {
-    background-color: var(--color-accent);
-    color: white;
+    text-decoration-thickness: 2px;
 }
 
 /* Contact section */
@@ -249,13 +247,53 @@ body {
 
 /* Links */
 a {
-    color: var(--color-accent);
-    text-decoration: none;
-    transition: color 0.2s ease;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: text-decoration-thickness 0.2s ease;
 }
 
 a:hover {
-    color: var(--color-accent-hover);
+    text-decoration-thickness: 2px;
+}
+
+/* Paper links in text */
+.paper-link-inline {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: text-decoration-thickness 0.2s ease;
+}
+
+.paper-link-inline:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* Paper highlight animation */
+.paper-highlight {
+    animation: highlight-pulse 2s ease-out;
+    border-radius: 8px;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        background-color: transparent;
+        transform: scale(1);
+    }
+    15% {
+        background-color: rgba(37, 99, 235, 0.1);
+        transform: scale(1.01);
+    }
+    30% {
+        background-color: rgba(37, 99, 235, 0.15);
+        transform: scale(1.01);
+    }
+    100% {
+        background-color: transparent;
+        transform: scale(1);
+    }
 }
 
 /* Footer */

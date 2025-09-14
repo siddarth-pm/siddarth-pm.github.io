@@ -14,7 +14,7 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="profile-section">
-                    <img src="profile-image.png" alt="Siddarth Mamidanna" class="profile-image">
+                    <img src="profile-image.tiff" alt="Siddarth Mamidanna" class="profile-image">
                     <div class="profile-info">
                         <h1 class="name">Siddarth Mamidanna</h1>
                         <p class="title">Computer Science Undergraduate</p>
@@ -22,7 +22,7 @@
                         <div class="contact-links">
                             <a href="mailto:spmamida@ucsc.edu" class="contact-link">Email</a>
                             <a href="#" class="contact-link">CV</a>
-                            <a href="#" class="contact-link">Google Scholar</a>
+                            <a href="https://scholar.google.com/citations?user=iTtH9xwAAAAJ&hl=en" class="contact-link">Google Scholar</a>
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,7 @@
             <div class="section-content">
                 <p class="intro">
                     I'm a Computer Science undergraduate student at UC Santa Cruz researching LLM interpretability and explainability with 
-                    <a href="#">Prof. Leilani Gilpin</a> and <a href="#">Yilun Zhou</a>. I'm applying to PhD programs in CS this fall (2025), 
-                    focusing on interpretability and safety of LLMs.
+                    <a href="https://people.ucsc.edu/~lgilpin/">Prof. Leilani Gilpin</a> and <a href="https://yilunzhou.github.io">Yilun Zhou</a>. I'm applying to PhD programs in CS this fall (2025), focusing on interpretability and safety of LLMs.
                 </p>
             </div>
         </section>
@@ -46,16 +45,10 @@
                 <h2 class="section-title">Research</h2>
                 <div class="research-content">
                     <p>
-                        My primary research focus is in LLM interpretability, specifically mechanistic interpretability. 
-                        I believe that interpretability will be crucial to both understanding and improving LLMs, and I'm 
-                        particularly interested in applying developing interpretability techniques to real-world applications.
+                        My primary research focus is in LLM interpretability, specifically mechanistic interpretability. I believe that interpretability will be crucial to both understanding and improving LLMs, and I'm particularly interested in applying developing interpretability techniques for real-world applications.
                     </p>
                     <p>
-                        I began my research journey in Prof. Gilpin's lab (AIEA), where I co-first authored a paper on LLM 
-                        explainability that has accumulated over 100 citations. I then collaborated with Yilun Zhou and 
-                        Prof. Ziyu Yao on mechanistic interpretability research, resulting in a paper accepted to EMNLP 2025. 
-                        I've also explored broader LLM applications through work with Prof. Ben Nye and Joel Walsh at the USC 
-                        Institute for Creative Technologies, focusing on fine-tuning vs. few-shot approaches for automated grading.
+                        I began my research journey in 2023 in Prof. Gilpin's lab (<a href="https://aiea-lab.github.io" target="_blank">AIEA</a>), where I co-first authored a <a href="#paper-llm-self-explanations" class="paper-link-inline">paper on LLM explainability</a> that now has 100+ citations. In this past year, I collaborated with <a href="https://yilunzhou.github.io" target="_blank">Yilun Zhou</a> and <a href="https://ziyuyao.org" target="_blank">Prof. Ziyu Yao</a> on mechanistic interpretability research, resulting in a <a href="#paper-all-for-one" class="paper-link-inline">paper accepted to EMNLP 2025</a>. I've also explored broader LLM applications through work with <a href="https://sites.google.com/site/benjaminnye/" target="_blank">Prof. Ben Nye</a> and <a href="https://joelawalsh01.github.io" target="_blank">Joel Walsh</a> at the <a href="https://ict.usc.edu" target="_blank">USC Institute for Creative Technologies</a> in 2024, writing a <a href="#paper-ai-grading" class="paper-link-inline">paper focusing on fine-tuning vs. few-shot approaches</a> for automated grading.
                     </p>
                 </div>
             </div>
@@ -65,26 +58,35 @@
         <section class="publications">
             <div class="section-content">
                 <h2 class="section-title">Publications</h2>
+                
                 <div class="publications-list">
-                    <div class="publication-item">
+                    <div class="publication-item" id="paper-all-for-one">
+                        <h3 class="paper-title">All for One: LLMs Solve Mental Math at the Last Token With Information Transferred From Other Tokens</h3>
+                        <p class="paper-authors">Siddarth Mamidanna, Daking Rai, Ziyu Yao</p>
+                        <p class="paper-venue"><em>EMNLP</em>, 2025</p>
+                        <div class="paper-links">
+                            <a href="https://www.arxiv.org/abs/2509.09650" class="paper-link">PDF</a>
+                            <a href="https://github.com/siddarth-pm/all-for-one" class="paper-link">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" id="paper-llm-self-explanations">
                         <h3 class="paper-title">Can LLMs Explain Themselves? A Study of LLM-Generated Self-Explanations</h3>
-                        <p class="paper-authors">Siddarth Mamidanna, Leilani Gilpin</p>
+                        <p class="paper-authors">Shiyuan Huang*, Siddarth Mamidanna*, Shreedhar Jangam, Yilun Zhou, Leilani H. Gilpin</p>
                         <p class="paper-venue"><em>ArXiv</em>, 2023</p>
                         <div class="paper-links">
                             <a href="https://arxiv.org/abs/2310.11207" class="paper-link">PDF</a>
+                            <a href="https://github.com/Shiyuan-eric/LLM-Self-Explanation" class="paper-link">Code</a>
                         </div>
                     </div>
-                    
-                    <div class="publication-item">
-                        <h3 class="paper-title">All for one: A mechanistic study of how all-shot learning emerges in GPT-2</h3>
-                        <p class="paper-authors">Yilun Zhou, Siddarth Mamidanna, Ziyu Yao</p>
-                        <p class="paper-venue"><em>EMNLP</em>, 2025</p>
-                    </div>
-                    
-                    <div class="publication-item">
+     
+                    <div class="publication-item" id="paper-ai-grading">
                         <h3 class="paper-title">A Comparison of Fine-Tuning and Few-Shot Approaches for AI-based Short Answer Grading</h3>
-                        <p class="paper-authors">Joel Walsh, Siddarth Mamidanna, Benjamin Nye</p>
+                        <p class="paper-authors">Joel Walsh*, Siddarth Mamidanna*, Benjamin Nye, Mark Core, Daniel Auerbach</p>
                         <p class="paper-venue"><em>AIED Workshop</em>, 2025</p>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2507.07032" class="paper-link">PDF</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,5 +108,46 @@
             <p>&copy; 2024 Siddarth Mamidanna</p>
         </div>
     </footer>
+
+    <script>
+        // Handle paper link clicks with smooth scrolling and highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all paper links
+            const paperLinks = document.querySelectorAll('.paper-link-inline');
+            
+            paperLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target element ID from the href
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // Remove any existing highlight class
+                        document.querySelectorAll('.paper-highlight').forEach(el => {
+                            el.classList.remove('paper-highlight');
+                        });
+                        
+                        // Smooth scroll to the target element
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        
+                        // Add highlight class after a brief delay to allow scrolling
+                        setTimeout(() => {
+                            targetElement.classList.add('paper-highlight');
+                            
+                            // Remove highlight class after animation completes
+                            setTimeout(() => {
+                                targetElement.classList.remove('paper-highlight');
+                            }, 2000);
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
