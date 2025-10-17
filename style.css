@@ -122,11 +122,12 @@ body {
     font-weight: 500;
     font-size: var(--font-size-base);
     padding: 0.5rem 0;
-    transition: text-decoration-thickness 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease, background-color 0.2s ease;
 }
 
 .contact-link:hover {
     text-decoration-thickness: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Section layouts */
@@ -226,13 +227,14 @@ body {
     text-underline-offset: 2px;
     font-weight: 500;
     font-size: 14px;
-    transition: text-decoration-thickness 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease, background-color 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
 
 .paper-link:hover {
     text-decoration-thickness: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Contact section */
@@ -251,11 +253,12 @@ a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
-    transition: text-decoration-thickness 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease, background-color 0.2s ease;
 }
 
 a:hover {
     text-decoration-thickness: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Paper links in text */
@@ -264,11 +267,12 @@ a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
-    transition: text-decoration-thickness 0.2s ease;
+    transition: text-decoration-thickness 0.2s ease, background-color 0.2s ease;
 }
 
 .paper-link-inline:hover {
     text-decoration-thickness: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Paper highlight animation */
