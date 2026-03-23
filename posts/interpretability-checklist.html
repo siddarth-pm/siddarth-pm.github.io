@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A placeholder checklist note by Siddarth Mamidanna.">
+    <title>Interpretability eval checklist | Siddarth Mamidanna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner shell" data-reveal>
+            <a href="../index.html" class="site-brand">Siddarth Mamidanna</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#publications">Publications</a>
+                <a href="../index.html#writing">Writing</a>
+                <a href="../index.html#connect">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shell post-shell">
+        <a href="../index.html#writing" class="back-link" data-reveal>&larr; Back</a>
+
+        <article>
+            <header class="post-header" data-reveal>
+                <p class="post-type">Checklist</p>
+                <h1 class="post-title">Interpretability eval checklist</h1>
+                <p class="post-deck">A rough checklist for deciding whether an interpretability result is actually useful.</p>
+            </header>
+
+            <div class="post-body" data-reveal>
+                <h2>Core questions</h2>
+                <ol>
+                    <li>Does the result explain a concrete behavior, or only show an interesting activation?</li>
+                    <li>Is the claimed mechanism stable across prompts, paraphrases, and seeds?</li>
+                    <li>Does intervention on the mechanism change the behavior in the predicted direction?</li>
+                    <li>Is the explanation local to a toy setting, or does it survive a more realistic task?</li>
+                </ol>
+
+                <h2>Failure cases to watch</h2>
+                <ul>
+                    <li>The feature is visually nice but does not support a causal claim.</li>
+                    <li>The behavior disappears as soon as prompt wording changes.</li>
+                    <li>The intervention works only because it damages the model globally.</li>
+                    <li>The explanation is post hoc and does not help prediction.</li>
+                </ul>
+
+                <h2>What would make this stronger</h2>
+                <ul>
+                    <li>A clean before-and-after intervention result.</li>
+                    <li>Evidence that the same story appears in related prompts.</li>
+                    <li>A short note on what the method would help an operator do.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner shell">
+            <p>&copy; <span data-current-year></span> Siddarth Mamidanna</p>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+</body>
+
+</html>

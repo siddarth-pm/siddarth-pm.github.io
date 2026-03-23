@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A placeholder lab log note by Siddarth Mamidanna.">
+    <title>Reasoning trace log | Siddarth Mamidanna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner shell" data-reveal>
+            <a href="../index.html" class="site-brand">Siddarth Mamidanna</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#publications">Publications</a>
+                <a href="../index.html#writing">Writing</a>
+                <a href="../index.html#connect">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shell post-shell">
+        <a href="../index.html#writing" class="back-link" data-reveal>&larr; Back</a>
+
+        <article>
+            <header class="post-header" data-reveal>
+                <p class="post-type">Lab log</p>
+                <h1 class="post-title">Reasoning trace log</h1>
+                <p class="post-deck">A placeholder lab log for hypotheses, observations, and next checks.</p>
+            </header>
+
+            <div class="post-body" data-reveal>
+                <h2>March 18</h2>
+                <ul>
+                    <li>Looked at a small set of reasoning traces where the model answered correctly for the wrong reason.</li>
+                    <li>The visible chain looked coherent, but token-level evidence suggested the answer was fixed early.</li>
+                </ul>
+
+                <h2>March 21</h2>
+                <ul>
+                    <li>Tried grouping examples by whether the final answer changed under paraphrase.</li>
+                    <li>Stable answers did not always correspond to stable intermediate reasoning.</li>
+                </ul>
+
+                <h2>Next things to test</h2>
+                <ol>
+                    <li>Compare traces before and after a targeted intervention.</li>
+                    <li>Separate cases where the model is wrong confidently from cases where it self-corrects late.</li>
+                    <li>Check whether explanation quality tracks any internal signal we can measure reliably.</li>
+                </ol>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner shell">
+            <p>&copy; <span data-current-year></span> Siddarth Mamidanna</p>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+</body>
+
+</html>
