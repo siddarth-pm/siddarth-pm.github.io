@@ -235,11 +235,12 @@ a {
     min-height: calc(100svh - 4.25rem);
     display: flex;
     align-items: center;
+    transition: min-height 620ms var(--ease-soft);
 }
 
 .hero__inner {
     padding: var(--space-7) 0 var(--space-6);
-    transition: padding 620ms var(--ease-soft);
+    transition: padding-bottom 620ms var(--ease-soft);
 }
 
 .hero-head,
@@ -415,18 +416,17 @@ a {
 
 .section-panel {
     overflow: hidden;
-    opacity: 1;
-    will-change: height, opacity;
-    transition:
-        height 620ms var(--ease-soft),
-        opacity 320ms ease;
+    contain: layout paint;
+    backface-visibility: hidden;
+    will-change: height;
+    transform: translateZ(0);
+    transition: height 620ms var(--ease-soft);
 }
 
 .section-panel--hero {
     margin-top: 1.1rem;
     transition:
         height 700ms var(--ease-soft),
-        opacity 360ms ease,
         margin-top 620ms var(--ease-soft);
 }
 
@@ -435,7 +435,8 @@ a {
 }
 
 .hero.section-block.is-collapsed .hero__inner {
-    padding: clamp(2.2rem, 6vw, 3rem) 0 1.8rem;
+    padding-top: var(--space-7);
+    padding-bottom: 1.8rem;
 }
 
 .section.section-block.is-collapsed {
@@ -444,10 +445,6 @@ a {
 
 .section.section-block.is-collapsed .section-head {
     margin-bottom: 0;
-}
-
-.section-block.is-collapsed .section-panel {
-    opacity: 0;
 }
 
 .section-block.is-collapsed .section-panel--hero {
