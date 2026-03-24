@@ -537,17 +537,32 @@ a {
 .row-item::before {
     content: "";
     position: absolute;
-    inset: 0.15rem 0.5rem 0.2rem;
-    border-radius: 0.85rem;
-    background: radial-gradient(
-        100% 140% at 36% 50%,
-        var(--panel-bg) 0%,
-        var(--panel-bg) 34%,
-        transparent 76%
+    inset: 0.22rem 0.9rem 0.28rem 0.8rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(16, 16, 16, 0.018) 10%,
+        rgba(16, 16, 16, 0.05) 24%,
+        rgba(16, 16, 16, 0.038) 42%,
+        rgba(16, 16, 16, 0.016) 62%,
+        transparent 82%
     );
     opacity: 0;
     pointer-events: none;
     transition: opacity 280ms ease;
+}
+
+html[data-theme='dark'] .row-item::before {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(244, 240, 232, 0.022) 10%,
+        rgba(244, 240, 232, 0.072) 24%,
+        rgba(244, 240, 232, 0.052) 42%,
+        rgba(244, 240, 232, 0.022) 62%,
+        transparent 82%
+    );
 }
 
 .row-item::after {
