@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     runSetup(setupReveal);
     runSetup(setupThemeToggle);
     runSetup(setupCollapsibleSections);
+    runSetup(setupPaperJumpLinks);
     runSetup(setupBatchToggle);
     runSetup(setupHoverPreviews);
     runSetup(setupHeader);
@@ -389,6 +390,41 @@ async function navigateToSection(sectionId) {
     });
 }
 
+function setupPaperJumpLinks() {
+    const links = [...document.querySelectorAll('a[href^="#paper-"]')];
+
+    if (!links.length) {
+        return;
+    }
+
+    links.forEach((link) => {
+        link.addEventListener("click", async (event) => {
+            const targetId = link.getAttribute("href")?.slice(1);
+
+            if (!targetId) {
+                return;
+            }
+
+            const target = document.getElementById(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+            await expandSection("publications");
+
+            const destination = Math.max(getDocumentTop(target) - getScrollPaddingTop() - 24, 0);
+            window.scrollTo({
+                top: destination,
+                behavior: "smooth"
+            });
+
+            flashPaperHighlight(target);
+        });
+    });
+}
+
 function areAllSectionsExpanded() {
     return [...collapsibleSections.values()].every(
         (record) => record.button.getAttribute("aria-expanded") === "true"
@@ -498,6 +534,37 @@ function setupHoverPreviews() {
         item.addEventListener("focusin", armPreview);
         item.addEventListener("focusout", clearPreview);
     });
+}
+
+let paperHighlightStartTimeoutId = null;
+let paperHighlightTimeoutId = null;
+
+function flashPaperHighlight(target) {
+    if (!target) {
+        return;
+    }
+
+    document.querySelectorAll(".row-item.is-paper-highlighted").forEach((item) => {
+        item.classList.remove("is-paper-highlighted");
+    });
+
+    if (paperHighlightStartTimeoutId) {
+        window.clearTimeout(paperHighlightStartTimeoutId);
+    }
+
+    if (paperHighlightTimeoutId) {
+        window.clearTimeout(paperHighlightTimeoutId);
+    }
+
+    paperHighlightStartTimeoutId = window.setTimeout(() => {
+        target.classList.add("is-paper-highlighted");
+        paperHighlightStartTimeoutId = null;
+
+        paperHighlightTimeoutId = window.setTimeout(() => {
+            target.classList.remove("is-paper-highlighted");
+            paperHighlightTimeoutId = null;
+        }, 1600);
+    }, 360);
 }
 
 function applyTheme(theme, button) {
